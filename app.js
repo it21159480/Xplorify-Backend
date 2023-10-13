@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Set up your routes
 app.use('/', require('./routes/packageRoute'));
-
+app.use('/', require('./routes/restaurantRoute'));
 const PORT = process.env.PORT || 8080;
 
 // Start the server
