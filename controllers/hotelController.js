@@ -6,7 +6,6 @@ exports.create = async (req,res) => {
         res.status(400).send({message: "Content cannot be empty!"});
         return;
     }
-
     const { hotelName, name, email, contactNo, noOfPersons, selectedSuite, checkInDate, checkOutDate } = req.body;
 
     // new package

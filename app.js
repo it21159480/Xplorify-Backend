@@ -16,7 +16,10 @@ app.use(express.json());
 // Set up your routes
 app.use('/', require('./routes/packageRoute'));
 app.use('/', require('./routes/hotelRoute'));
+app.use('/', require('./routes/blogRoute'));
 app.use('/', require('./routes/restaurantRoute'));
+app.use('/', require('./routes/driverRoute'));
+app.use('/', require('./routes/vehicleRoute'));
 
 const PORT = process.env.PORT || 8080;
 
