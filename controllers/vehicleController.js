@@ -6,16 +6,22 @@ exports.create = async (req, res) => {
         res.status(400).send({ message: "Content cannot be empty!" });
         return;
     }
-    const { make, model, year, registrationNumber, plateNumber, insuranceNumber } = req.body;
+    const { 
+        vehicleMake, 
+        vehicleModel, 
+        vehicleYear, 
+        vehicleRegistrationNumber, 
+        vehiclePlateNumber, 
+        vehicleInsurance } = req.body;
 
     // new package
     const vehicle = new Vehicle({
-        make,
-        model,
-        year,
-        registrationNumber,
-        plateNumber,
-        insuranceNumber,
+        vehicleMake,
+        vehicleModel,
+        vehicleYear,
+        vehicleRegistrationNumber,
+        vehiclePlateNumber,
+        vehicleInsurance,
     })
 
     // save vehicle details in the database
